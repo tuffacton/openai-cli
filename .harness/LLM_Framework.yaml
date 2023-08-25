@@ -20,6 +20,11 @@ pipeline:
                     templateRef: OpenAI_Completion
                     versionLabel: 0.1.0
                     gitBranch: master
+                    templateInputs:
+                      type: Container
+                      spec:
+                        envVariables:
+                          PROMPT: <+input>
               - step:
                   type: JiraCreate
                   name: JiraCreate
